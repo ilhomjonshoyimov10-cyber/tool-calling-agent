@@ -1,0 +1,12 @@
+services:
+  agent:
+    build: .
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - agent-data:/app/data   # the to-do list survives restarts
+    restart: unless-stopped
+
+volumes:
+  agent-data:
