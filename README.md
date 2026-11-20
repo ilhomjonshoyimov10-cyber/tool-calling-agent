@@ -149,8 +149,10 @@ tests/
 from pydantic import BaseModel, Field
 from agent.tools.base import Tool
 
+
 class GreetArgs(BaseModel):
     name: str = Field(description="Who to greet")
+
 
 class GreetTool(Tool):
     name = "greet"
